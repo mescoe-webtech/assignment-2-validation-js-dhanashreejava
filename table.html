@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+	border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+	<input text="number" id="id1" placeholder="Enter your number">
+	<table id="myTable1">
+		<tr>
+     <td>multiplicand&nbsp</td>
+		<td>sign&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		<td>Multiplier</td>
+		<td id="ans" value=ans>Ans</td>
+		</tr>
+	</table>
+
+
+	<table id="my-table">
+		
+	</table>
+	<br>
+
+	<button type="button" onclick="addRow('my-table')">Try it</button>
+
+	<script>
+	      var i=0;
+		function addRow(tableID,a=document.getElementById("id1").value,sign='*') {
+			let tableRef = document.getElementById(tableID);
+			let newRow = tableRef.insertRow(-1);
+			let newCell = newRow.insertCell(0);
+			
+			let newText = document.createTextNode(a+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+sign+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+i+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+(a*i));
+			ans=newCell.appendChild(newText);
+			i = i + 1;
+
+		}
+	</script>
+
+</body>
+</html>
